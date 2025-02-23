@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2e8b57; /* Forest green */
+    color: white;
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.tab-button {
+    background-color: #a52a2a; /* Red theme */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.tab-button:hover {
+    background-color: #8b0000;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+#timer-display {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: white;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #ff6347; /* Tomato color */
+}
+
+button {
+    background-color: #a52a2a;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #8b0000;
+}
+
+/* Tomato Plant Styling */
+.plant-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin: 10px 0;
+}
+
+.plant-container img {
+    width: 100px; /* Ensures all images render at the same size */
+    height: auto;
+    display: block;
+}

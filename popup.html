@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button" data-tab="timer">Timer</button>
+            <button class="tab-button" data-tab="report">Report</button>
+            <button class="tab-button" data-tab="tasks">Tasks</button>
+        </div>
+        
+        <div class="tab-content" id="timer">
+            <h2 id="mode-label">Focus Mode</h2>
+            <div id="timer-display">25:00</div>
+            <div class="plant-container" id="plant-container">
+                <img id="plant" src="images/seedling.png" alt="Tomato Plant">
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress"></div>
+            </div>
+            <label for="focus-duration">Focus Duration (min):</label>
+            <input type="number" id="focus-duration" value="25" min="1">
+            <label for="break-duration">Break Duration (min):</label>
+            <input type="number" id="break-duration" value="5" min="1">
+            <button id="start-stop">Start</button>
+            <button id="reset">Reset</button>
+            <button id="switch-mode">Switch Mode</button>
+        </div>
+        
+        <div class="tab-content" id="report" style="display: none;">
+            <h2>Work Time Report</h2>
+            <ul>
+                <li>Today: <span id="today-time">0m</span></li>
+                <li>Week: <span id="week-time">0m</span></li>
+                <li>Month: <span id="month-time">0m</span></li>
+                <li>Year: <span id="year-time">0m</span></li>
+                <li>All Time: <span id="all-time">0m</span></li>
+            </ul>
+        </div>
+        
+        <div class="tab-content" id="tasks" style="display: none;">
+            <h2>Task List</h2>
+            <ul id="task-list"></ul>
+            <input type="text" id="new-task" placeholder="New Task">
+            <button id="add-task">Add Task</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
